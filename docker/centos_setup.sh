@@ -21,11 +21,11 @@ systemctl enable docker
 
 cd /usr/local
 mkdir docker-workspace
-cd /usr/local/docker-workspace
 
 /bin/cp ./hello_flask/docker/docker-compose.yml ./docker-workspace
 /bin/cp ./hello_flask/docker/Dockerfile ./hello_flask
 
 # ======== compose ========
+cd /usr/local/docker-workspace
 docker-compose build
 docker-compose up -d
