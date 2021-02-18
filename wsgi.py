@@ -1,1 +1,1 @@
-from myapp import app
+from app import app
