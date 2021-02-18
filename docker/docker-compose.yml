@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    restart: always
+    container_name: web
+    build: /usr/local/hello_flask
+    command: bash -c "gunicorn app.wsgi_app:application --bind 0.0.0.0:5000 --keep-alive 1"
+    environment:
+      - TZ=Asia/Taipei
+    ports:
+      - "5000:5000"
